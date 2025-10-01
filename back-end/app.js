@@ -40,6 +40,17 @@ app.get('/messages', async (req, res) => {
   }
 })
 
+//a route to handle the about page
+app.get('/about', (req, res) => {
+  
+    res.json({
+      header: "Hi everyone, I'm Sanay!",
+      "paragraph-1": "this",
+      "paragraph-2": "that",
+      "img-path": "/images/nyu_discord_pfp.jpeg",
+    }) 
+})
+
 // a route to handle fetching a single message by its id
 app.get('/messages/:messageId', async (req, res) => {
   // load all messages from database

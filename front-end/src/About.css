@@ -1,0 +1,11 @@
+.about-paragraph {
+  white-space: pre-wrap;
+}
+
+.list-div {
+  white-space: pre-wrap;
+  width: 15vw;
+  text-align: left;
+  margin: 0 auto;
+  padding: 1em;
+}

@@ -44,10 +44,11 @@ app.get('/messages', async (req, res) => {
 app.get('/about', (req, res) => {
   
     res.json({
-      header: "Hi everyone, I'm Sanay!",
-      "paragraph-1": "this",
-      "paragraph-2": "that",
-      "img-path": "/images/nyu_discord_pfp.jpeg",
+      title: "Hi everyone, I'm Sanay!",
+      about_Me: "A bit about me...",
+      p1_0: "I'm a senior studying (obviously) CS here @ NYU! I'm from Morris Plains, New Jersey. Here are some things I like:",
+      p1_1: "\t- Beaches!\n\t- Music!\n\t- Playing tennis!\n\t- Watching tennis!\n\t- Coding!", 
+      img_path: "/images/nyu_discord_pfp.jpeg",
     }) 
 })
 

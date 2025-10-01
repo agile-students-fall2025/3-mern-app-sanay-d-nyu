@@ -4,7 +4,12 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
 const About = props => {
-  const [aboutData, setAboutData] = useState({ header: '', "img-path": '' , "paragraph-1": "", "paragraph-2": ""})
+  const [aboutData, setAboutData] = useState({
+    title: '', 
+    img_path: '',
+    p1_0: "",
+    p1_1: ""
+  })
   const [error, setError] = useState(null);
   
   useEffect(() => {
@@ -22,10 +27,12 @@ const About = props => {
 
   return (
     <>
-      <h1>{aboutData.header}</h1>
-      <p>{aboutData["paragraph-1"]}</p>
-      <p>{aboutData["paragraph-2"]}</p>
-      <img src={aboutData["img-path"]} alt="About me" />
+      <h1>{aboutData.title}</h1>
+      <p className="about-paragraph">{aboutData.p1_0}</p>
+      <div className="list-div">
+        <p className="about-paragraph">{aboutData.p1_1}</p>
+      </div>
+      <img src={aboutData.img_path} alt="About me" />
     </>
   )
 }
